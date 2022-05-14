@@ -19,7 +19,7 @@ public class Asteroid {
     private int z;
     private int rockCover;
     private String name;
-    public TransportGate gate;
+    private TransportGate gate;
     private ArrayList<Settler> settlersOnAsteroid;
     private ArrayList<Robot> robotsOnAsteroid;
     private ArrayList<ResourceBase> resourceOfAsteroid;
@@ -29,6 +29,7 @@ public class Asteroid {
     private Boolean isRadioactive;
     private Boolean hasGate;
     private Boolean isExploded;
+    private final int settlerOnAsteroidMax = 3;
 
     //</editor-fold>
 
@@ -129,7 +130,7 @@ public class Asteroid {
     public boolean acceptTraveller(Settler settler) {
         int settlerCounter = 0; // counter to check the number of Settlers of the same Player
 
-        if (this.settlersOnAsteroid.size() < 3) { // checks if there are less than 3 settlers on this Asteroid
+        if (this.settlersOnAsteroid.size() < settlerOnAsteroidMax) { // checks if there are less than 3 settlers on this Asteroid
             for (Settler settlers : settlersOnAsteroid) {
                 // check if how many settlers of the same player are there
                 if (settlers.getPlayerID() == settler.getPlayerID()) {
