@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class BuildWindow extends javax.swing.JFrame {
 
-    GameWindow previous;
+    private GameWindow previous;
 
     /**
      * Creates new form BuildingMessage
