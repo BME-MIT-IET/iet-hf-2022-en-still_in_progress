@@ -409,13 +409,13 @@ public class GameWindow extends javax.swing.JFrame {
         labelPic.setMaximumSize(new java.awt.Dimension(46, 46));
         labelPic.setMinimumSize(new java.awt.Dimension(46, 46));
         labelPic.setName("labelPic"); // NOI18N
-        ArrayList<String>  Settlers = new ArrayList<String>();
-        //ArrayList<Settler> Settlers= Game.getCurrentPlayer().getSettlers();
+        ArrayList<String>  settlers = new ArrayList<String>();
+        //ArrayList<Settler> settlers= Game.getCurrentPlayer().getSettlers();
         for(Settler i :Game.getCurrentPlayer().getSettlers() )
         {
-            Settlers.add(i.getName());
+            settlers.add(i.getName());
         }
-        SettlersListLabel.setModel(new javax.swing.DefaultComboBoxModel(Settlers.toArray()));
+        SettlersListLabel.setModel(new javax.swing.DefaultComboBoxModel(settlers.toArray()));
         SettlersListLabel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 selectSettler(evt);
