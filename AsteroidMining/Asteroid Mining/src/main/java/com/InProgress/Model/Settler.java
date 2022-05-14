@@ -1,6 +1,6 @@
-package com.InProgress.Model;
+package main.java.com.InProgress.Model;
 
-import com.InProgress.GUI.GameWindow;
+import main.java.com.InProgress.GUI.GameWindow;
 
 /**
  * The Settler class is derived from the Traveller base.
