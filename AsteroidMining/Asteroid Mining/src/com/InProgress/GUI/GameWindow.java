@@ -24,9 +24,10 @@ public class GameWindow extends javax.swing.JFrame {
      * @return Image file
      */
     private Image getImage (String name) {
-        String fileName = "symbols/" + name.toLowerCase() + ".png";
-        ClassLoader classLoader = this.getClass().getClassLoader();
-        ImageIcon icon = new ImageIcon(classLoader.getResource(fileName));
+        //TODO Change this to you address for the symbols directory
+        String fileName = "C:/Users/Lenovo/Desktop/iet-hf-2022-en-still_in_progress/AsteroidMining/Asteroid Mining/resources/symbols/" + name.toLowerCase() + ".png";
+        //ClassLoader classLoader = this.getClass().getClassLoader();
+        ImageIcon icon = new ImageIcon(fileName);
         return icon.getImage();
     }
 
