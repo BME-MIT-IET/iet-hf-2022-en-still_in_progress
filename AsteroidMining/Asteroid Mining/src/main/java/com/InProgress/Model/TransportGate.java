@@ -1,4 +1,4 @@
-package com.InProgress.Model;
+package main.java.com.InProgress.Model;
 
 /**
  * Represents a TransportGate that allow Settlers to travel further distances at once.
