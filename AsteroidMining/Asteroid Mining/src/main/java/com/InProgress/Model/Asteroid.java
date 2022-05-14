@@ -19,7 +19,7 @@ public class Asteroid {
     private int z;
     private int rockCover;
     private String name;
-    public TransportGate gate;
+    private TransportGate gate;
     private ArrayList<Settler> settlersOnAsteroid;
     private ArrayList<Robot> robotsOnAsteroid;
     private ArrayList<ResourceBase> resourceOfAsteroid;
