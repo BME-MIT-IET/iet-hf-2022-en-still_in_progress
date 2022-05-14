@@ -1,6 +1,6 @@
-package com.InProgress.GUI;
+package main.java.com.InProgress.GUI;
 
-import com.InProgress.Model.*;
+import main.java.com.InProgress.Model.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

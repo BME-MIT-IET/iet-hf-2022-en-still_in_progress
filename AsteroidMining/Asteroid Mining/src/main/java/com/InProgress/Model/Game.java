@@ -1,9 +1,9 @@
-package com.InProgress.Model;
+package main.java.com.InProgress.Model;
 
-import com.InProgress.GUI.GameWindow;
-import com.InProgress.GUI.MineMessage;
-import com.InProgress.GUI.PickUpMessage;
-import com.InProgress.GUI.StartWindow;
+import main.java.com.InProgress.GUI.GameWindow;
+import main.java.com.InProgress.GUI.MineMessage;
+import main.java.com.InProgress.GUI.PickUpMessage;
+import main.java.com.InProgress.GUI.StartWindow;
 import javax.swing.*;
 import java.io.*;
 import java.util.*;

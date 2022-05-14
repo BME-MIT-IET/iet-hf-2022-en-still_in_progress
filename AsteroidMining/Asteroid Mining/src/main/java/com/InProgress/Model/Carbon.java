@@ -1,4 +1,4 @@
-package com.InProgress.Model;
+package main.java.com.InProgress.Model;
 
 /**
  * Represents a Carbon Resource. It is derived from ResourceBase.

@@ -1,4 +1,4 @@
-package com.InProgress.Model;
+package main.java.com.InProgress.Model;
 
 /**
  * Represents a Uranium Resource. It is derived from ResourceBase.

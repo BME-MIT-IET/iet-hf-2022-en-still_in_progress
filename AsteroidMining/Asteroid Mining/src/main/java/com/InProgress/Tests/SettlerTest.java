@@ -1,5 +1,5 @@
 package main.java.com.InProgress.Tests;
-import com.InProgress.Model.Asteroid;
+import main.java.com.InProgress.Model.Asteroid;
 import org.junit.jupiter.api.Test;
 
 class SettlerTest {

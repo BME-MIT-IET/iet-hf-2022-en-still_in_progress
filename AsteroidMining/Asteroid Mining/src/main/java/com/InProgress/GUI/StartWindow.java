@@ -1,6 +1,6 @@
-package com.InProgress.GUI;
+package main.java.com.InProgress.GUI;
 
-import com.InProgress.Model.Game;
+import main.java.com.InProgress.Model.Game;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
