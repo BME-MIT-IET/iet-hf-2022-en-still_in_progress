@@ -1,12 +1,10 @@
-package com.InProgress.Tests;
-
-import com.InProgress.Model.Settler;
-import com.InProgress.Model.*;
+package main.java.com.InProgress.Tests;
+import com.InProgress.Model.Asteroid;
 import org.junit.jupiter.api.Test;
 
 class SettlerTest {
 
-    Asteroid testAsteroid = new Asteroid( 0, 0, 0,3);
+    private Asteroid testAsteroid = new Asteroid( 0, 0, 0,3);
     public SettlerTest(){
 
     }
