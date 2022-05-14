@@ -223,7 +223,7 @@ public class Settler extends TravellerBase {
      * @return 0: action was successful, 1: not enough Resources available
      */
     public int buildTransportGate() {
-        if(itsInventory.getStoredGates().size() == 0) {
+        if(itsInventory.getStoredGates().isEmpty()) {
             if (itsInventory.checkResources(2)) { // checks if there are enough resources
                 int uCount = 0; // counts the number of units of Uranium
                 int iCount = 0; // counts the number of units of Iron
@@ -308,7 +308,7 @@ public class Settler extends TravellerBase {
      */
     public int leaveResource(String resource) {
         int index;
-        if(itsInventory.getStoredResources().size() == 0) {
+        if(itsInventory.getStoredResources().isEmpty()) {
             return 2; // inventory is empty
         }
         for(index = 0; index < itsInventory.getStoredResources().size(); index++){
