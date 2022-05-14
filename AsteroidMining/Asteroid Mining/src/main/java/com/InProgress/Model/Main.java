@@ -1,6 +1,6 @@
-package com.InProgress.Model;
+package main.java.com.InProgress.Model;
 
-import com.InProgress.GUI.StartWindow;
+import main.java.com.InProgress.GUI.StartWindow;
 
 /**
  * Entry point of the application.

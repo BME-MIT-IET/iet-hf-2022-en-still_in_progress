@@ -1,5 +1,4 @@
-package com.InProgress.GUI;
-
+package main.java.com.InProgress.GUI;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
