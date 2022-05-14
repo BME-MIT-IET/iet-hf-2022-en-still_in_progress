@@ -84,12 +84,12 @@ public class Settler extends TravellerBase {
             TransportGate Gate1 = a.getGate();
 
             if (Gate1.getActive()) {    // if the gate is active (means if the pair is also deployed)
-                TransportGate Gate2 = Gate1.getPair();
-                if (Gate2.getCurrentPosition().acceptTraveller(this)) {
+                TransportGate gate2 = Gate1.getPair();
+                if (gate2.getCurrentPosition().acceptTraveller(this)) {
                     a.getSettlersOnAsteroid().remove(this);  // settler is removed from the list
                     isHidden = false;
                     currentPosition.hideMyTravellers();
-                    currentPosition = Gate2.getCurrentPosition();  // successful travel
+                    currentPosition = gate2.getCurrentPosition();  // successful travel
                     hide(currentPosition); // hides when successfully travels
 
                     return 0; // successful action
