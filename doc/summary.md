@@ -30,7 +30,8 @@ For this assignment we are going to focus on
 
  - static analysis of the original code base
  - adding a build framework, e. g. Maven
- - implementing  unit tests for the backend classes 
+ - implementing  unit tests for the backend classes
+ - manual testing of the GUI
 
 
 

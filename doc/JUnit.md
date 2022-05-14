@@ -2,7 +2,7 @@
 
 We implemented unit tests for the following classes
 
-- Asteroid
+- Asteroid (10 tests)
 - Game
 - Settler
 - Robot (4 tests)
@@ -11,6 +11,7 @@ We implemented unit tests for the following classes
 
 
 ## Main Results
+The test `perihelionChanger_WaterIceAsteroidUT_NoSublimation()` actually revealed an error in the `perihelionChanger()` method. The error was immediately fixed.
 
 
 
