@@ -408,8 +408,9 @@ public class GameWindow extends javax.swing.JFrame {
         labelPic.setMaximumSize(new java.awt.Dimension(46, 46));
         labelPic.setMinimumSize(new java.awt.Dimension(46, 46));
         labelPic.setName("labelPic"); // NOI18N
+
         ArrayList<String>  settlers = new ArrayList<String>();
-        //ArrayList<Settler> settlers= Game.getCurrentPlayer().getSettlers();
+
         for(Settler i :Game.getCurrentPlayer().getSettlers() )
         {
             settlers.add(i.getName());
