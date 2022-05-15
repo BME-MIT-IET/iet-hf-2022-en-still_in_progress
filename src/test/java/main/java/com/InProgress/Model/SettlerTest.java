@@ -129,7 +129,7 @@ class SettlerTest {
     }
 
     @Test
-    void Leave_Resource_Settle_Success(){
+    void Leave_Resource_Settler_Success(){
         Inventory resourceInventory = new Inventory();
         resourceInventory.setStoredResources(new WaterIce("WaterIce"));
         this.testSettler.setItsInventory(resourceInventory);
@@ -138,12 +138,17 @@ class SettlerTest {
         this.testSettler.leaveResource("WaterIce");
 
         assertEquals("WaterIce",this.sourceAsteroid.getStoredResourceOfAsteroid().get(0).getResourceType());
+    }
+    @Test
+    void Leave_Resource_Settler_Failure() {
+        Inventory resourceInventory = new Inventory();
+        resourceInventory.setStoredResources(new WaterIce("Carbon"));
+        this.testSettler.setItsInventory(resourceInventory);
+        this.sourceAsteroid.setHollow(true);
 
+        this.testSettler.leaveResource("WaterIce");
 
-
-
+        assertEquals(0, this.sourceAsteroid.getStoredResourceOfAsteroid().size());
 
     }
-
-
 }
