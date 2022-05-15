@@ -34,7 +34,8 @@ public class Uranium extends ResourceBase{
     @Override
     public void explode(Asteroid A)  {
 
-        Game.controllerInternal(1);
+        // internal controller disabled
+        // Game.controllerInternal(1);
 
         A.setExploded(true); // change isExploded attribute of Asteroid to true.
         Game.setNumberOfAsteroids(Game.getNumberOfAsteroids()-1);

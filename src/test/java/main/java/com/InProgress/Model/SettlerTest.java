@@ -6,9 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 class SettlerTest {
-
-
-
+    
     private Asteroid sourceAsteroid = new Asteroid( 0, 0, 0,3);
     private Asteroid destinationAsteroid = new Asteroid( 2, 0, 0,3);
     private Asteroid wrongDestinationAsteroid = new Asteroid( 4, 4, 4,3);
