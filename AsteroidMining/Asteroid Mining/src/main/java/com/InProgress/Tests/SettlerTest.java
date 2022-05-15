@@ -2,6 +2,10 @@ package main.java.com.InProgress.Tests;
 
 import main.java.com.InProgress.Model.Asteroid;
 
+import main.java.com.InProgress.Model.Carbon;
+import main.java.com.InProgress.Model.Settler;
+import main.java.com.InProgress.Model.TransportGate;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
