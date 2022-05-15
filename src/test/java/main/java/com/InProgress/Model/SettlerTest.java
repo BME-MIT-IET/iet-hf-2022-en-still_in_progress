@@ -22,11 +22,6 @@ class SettlerTest {
         this.destinationAsteroid.setRockCover(3);
         this.destinationAsteroid.setResourceOfAsteroid(new Carbon("Carbon"));
         this.testSettler = new Settler("Test",this.sourceAsteroid,0);
-        this.sourceAsteroid.setGate(this.sourceGate);
-        this.destinationAsteroid.setGate(this.destinationGate);
-        this.sourceGate.setPair(this.destinationGate);
-        this.sourceGate.setActive(true);
-        this.destinationGate.setActive(true);
 
     }
 
@@ -103,6 +98,19 @@ class SettlerTest {
 
         assertEquals(this.testSettler.getItsInventory().getStoredResources(),emptyList);
 
+    }
+    @Test
+    void Build_Gate_Settler_Success(){
+        Inventory gateInventory = new Inventory();
+        gateInventory.setStoredResources(new WaterIce("WaterIce"));
+        gateInventory.setStoredResources(new Uranium("Uranium"));
+        gateInventory.setStoredResources(new Iron("Iron"));
+        gateInventory.setStoredResources(new Iron("Iron"));
+        this.testSettler.setItsInventory(gateInventory);
+
+        this.testSettler.buildTransportGate();
+
+        assertEquals(2,this.testSettler.getItsInventory().getStoredGates().size());
     }
 
 }
