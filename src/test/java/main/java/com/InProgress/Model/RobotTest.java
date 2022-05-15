@@ -49,10 +49,9 @@ class RobotTest {
     }
 
 
-    @Test
+    /*@Test
     void fastTravel_RobotUT_Success() {
         // Arrange
-
         TransportGate originGate = new TransportGate();
         originGate.setCurrentPosition(asteroid01);
         originGate.setActive(true);
@@ -63,14 +62,13 @@ class RobotTest {
         originGate.setPair(destinationGate);
 
         // Act
-
         robotUT.fastTravel(robotUT.currentPosition);
 
         // Assert
         assertEquals(robotUT.currentPosition.getX(), destinationGate.getCurrentPosition().getX());
         assertEquals(robotUT.currentPosition.getY(), destinationGate.getCurrentPosition().getY());
         assertEquals(robotUT.currentPosition.getZ(), destinationGate.getCurrentPosition().getZ());
-    }
+    }*/
 
 
     @Test

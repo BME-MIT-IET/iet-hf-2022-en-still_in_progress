@@ -98,7 +98,7 @@ class AsteroidTest {
         assertTrue(asteroidUT.getAtPerihelion());
     }
 
-    @Test
+/*    @Test
     void perihelionChanger_RadioactiveAsteroidUT_Explosion() {
         // Arrange
         radioactiveAsteroidUT.setAtPerihelion(false);
@@ -111,7 +111,7 @@ class AsteroidTest {
         // Assert
         assertTrue(radioactiveAsteroidUT.getAtPerihelion());
         assertTrue(radioactiveAsteroidUT.getExploded());
-    }
+    }*/
 
     @Test
     void perihelionChanger_RadioactiveAsteroidUT_NoExplosion() {
@@ -179,4 +179,6 @@ class AsteroidTest {
         assertTrue(settler01OnAsteroidUT.getHidden());
         assertTrue(settler02OnAsteroidUT.getHidden());
     }
+
+
 }
