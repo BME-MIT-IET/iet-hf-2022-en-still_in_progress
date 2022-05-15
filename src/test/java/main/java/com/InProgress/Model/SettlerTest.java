@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 class SettlerTest {
-    
+    int ROCK_COVER = 3;
     private Asteroid sourceAsteroid = new Asteroid( 0, 0, 0,3);
     private Asteroid destinationAsteroid = new Asteroid( 2, 0, 0,3);
     private Asteroid wrongDestinationAsteroid = new Asteroid( 4, 4, 4,3);
@@ -61,4 +61,13 @@ class SettlerTest {
     }
 
      */
+    @Test
+    void Drill_Settler_Success(){
+        this.sourceAsteroid.setRockCover(ROCK_COVER);
+
+        this.testSettler.drill(this.sourceAsteroid);
+
+        assertEquals(ROCK_COVER-1,this.sourceAsteroid.getDepth());
+    }
+
 }
