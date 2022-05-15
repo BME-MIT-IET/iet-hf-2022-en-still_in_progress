@@ -76,5 +76,17 @@ class SettlerTest {
         this.testSettler.drill(this.sourceAsteroid);
         assertNotEquals(-1,this.sourceAsteroid.getDepth());
     }
+    @Test
+    void Mine_Settler_Success()
+    {
+        this.sourceAsteroid.setResourceOfAsteroid(new Carbon("Carbon"));
+        this.sourceAsteroid.setRockCover(0);
+
+        this.testSettler.mine(this.sourceAsteroid);
+
+        String nameOfResource = this.testSettler.getItsInventory().getStoredResources().get(0).getResourceType();
+
+        assertEquals(nameOfResource,"Carbon");
+    }
 
 }
