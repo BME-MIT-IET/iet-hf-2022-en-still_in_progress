@@ -3,7 +3,7 @@
 We implemented unit tests for the following classes
 
 - Asteroid (10 tests)
-- Settler
+- Settler (10 tests)
 - Robot (4 tests)
 
 ## Description
@@ -16,10 +16,10 @@ The test `perihelionChanger_WaterIceAsteroidUT_NoSublimation()` actually reveale
 
 The project had no unit tests before, therefore the code coverage was **0%**.
 
-The implemented tests achieve a code coverage of **...**.
+The implemented tests achieve a code coverage as shown in the figure below.
 
 
-**ADD PITCURE OF CODE COVERAGE HERE**
+![](./images/coverage.PNG)
 
 
 
