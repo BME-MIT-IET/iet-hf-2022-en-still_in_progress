@@ -81,10 +81,10 @@ public class Settler extends TravellerBase {
     @Override
     public int fastTravel(Asteroid a) {
         if (a.getHasGate()) { // if the current asteroid has a transport gate
-            TransportGate Gate1 = a.getGate();
+            TransportGate gate1 = a.getGate();
 
-            if (Gate1.getActive()) {    // if the gate is active (means if the pair is also deployed)
-                TransportGate Gate2 = Gate1.getPair();
+            if (gate1.getActive()) {    // if the gate is active (means if the pair is also deployed)
+                TransportGate Gate2 = gate1.getPair();
                 if (Gate2.getCurrentPosition().acceptTraveller(this)) {
                     a.getSettlersOnAsteroid().remove(this);  // settler is removed from the list
                     isHidden = false;
@@ -223,7 +223,7 @@ public class Settler extends TravellerBase {
      * @return 0: action was successful, 1: not enough Resources available
      */
     public int buildTransportGate() {
-        if(itsInventory.getStoredGates().size() == 0) {
+        if(itsInventory.getStoredGates().isEmpty()) {
             if (itsInventory.checkResources(2)) { // checks if there are enough resources
                 int uCount = 0; // counts the number of units of Uranium
                 int iCount = 0; // counts the number of units of Iron
@@ -308,7 +308,7 @@ public class Settler extends TravellerBase {
      */
     public int leaveResource(String resource) {
         int index;
-        if(itsInventory.getStoredResources().size() == 0) {
+        if(itsInventory.getStoredResources().isEmpty()) {
             return 2; // inventory is empty
         }
         for(index = 0; index < itsInventory.getStoredResources().size(); index++){
