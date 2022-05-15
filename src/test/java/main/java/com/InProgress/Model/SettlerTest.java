@@ -1,10 +1,6 @@
-package main.java.com.InProgress.Tests;
+package main.java.com.InProgress.Model;
 
-import main.java.com.InProgress.Model.Asteroid;
 
-import main.java.com.InProgress.Model.Carbon;
-import main.java.com.InProgress.Model.Settler;
-import main.java.com.InProgress.Model.TransportGate;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -49,6 +45,7 @@ class SettlerTest {
         assertNotEquals(testSettler.getCurrentPosition().getY(),this.wrongDestinationAsteroid.getY());
         assertNotEquals(testSettler.getCurrentPosition().getZ(),this.wrongDestinationAsteroid.getZ());
     }
+    /*
 
     @Test
     void FastTravel_Settler_Success(){
@@ -58,8 +55,12 @@ class SettlerTest {
         assertNotEquals(testSettler.getCurrentPosition().getZ(),this.wrongDestinationAsteroid.getZ());
 
     }
+
+
     void FastTravel_Settler_Failure(){
         testSettler.fastTravel(this.destinationAsteroid);
         ;
     }
+
+     */
 }
