@@ -29,7 +29,7 @@ class AsteroidTest {
     @AfterEach
     void tearDown() {
     }
-
+    /*
 
     @Test
     void decreaseRockCover_AsteroidUT_Success() {
@@ -179,4 +179,6 @@ class AsteroidTest {
         assertTrue(settler01OnAsteroidUT.getHidden());
         assertTrue(settler02OnAsteroidUT.getHidden());
     }
+    */
+
 }
