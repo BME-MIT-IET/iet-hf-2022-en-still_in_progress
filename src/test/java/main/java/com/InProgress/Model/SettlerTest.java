@@ -21,7 +21,6 @@ class SettlerTest {
     @BeforeEach
     private void Arrange() {
         this.destinationAsteroid.setRockCover(3);
-        this.destinationAsteroid.setResourceOfAsteroid(new Carbon("Carbon"));
         this.testSettler = new Settler("Test", this.sourceAsteroid, 0);
 
     }
@@ -127,6 +126,23 @@ class SettlerTest {
         this.testSettler.buildTransportGate();
 
         assertEquals(0, this.testSettler.getItsInventory().getStoredGates().size());
+    }
+
+    @Test
+    void Leave_Resource_Settle_Success(){
+        Inventory resourceInventory = new Inventory();
+        resourceInventory.setStoredResources(new WaterIce("WaterIce"));
+        this.testSettler.setItsInventory(resourceInventory);
+        this.sourceAsteroid.setHollow(true);
+
+        this.testSettler.leaveResource("WaterIce");
+
+        assertEquals("WaterIce",this.sourceAsteroid.getStoredResourceOfAsteroid().get(0).getResourceType());
+
+
+
+
+
     }
 
 
