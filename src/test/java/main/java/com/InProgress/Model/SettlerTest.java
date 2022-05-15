@@ -69,5 +69,12 @@ class SettlerTest {
 
         assertEquals(ROCK_COVER-1,this.sourceAsteroid.getDepth());
     }
+    @Test
+    void Drill_Settler_Failure()
+    {
+        this.sourceAsteroid.setRockCover(0);
+        this.testSettler.drill(this.sourceAsteroid);
+        assertNotEquals(-1,this.sourceAsteroid.getDepth());
+    }
 
 }
