@@ -1,7 +1,7 @@
 package main.java.com.InProgress.Tests;
-import main.java.com.InProgress.Model.*;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
+
+import main.java.com.InProgress.Model.Asteroid;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

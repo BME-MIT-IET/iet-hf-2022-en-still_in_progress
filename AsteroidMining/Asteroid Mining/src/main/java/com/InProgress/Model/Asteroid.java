@@ -167,7 +167,7 @@ public class Asteroid {
         {
             this.resourceOfAsteroid.get(0).explode(this);
         }
-        if(isAtPerihelion && this.getResourceOfAsteroid().get(0) instanceof WaterIce) // checks if the resource is WaterIce and if it has to sublime
+        if(isAtPerihelion && this.getResourceOfAsteroid().get(0) instanceof WaterIce && rockCover == 0) // checks if the resource is WaterIce and if it has to sublime
         {
             this.resourceOfAsteroid.get(0).sublime(this);
         }

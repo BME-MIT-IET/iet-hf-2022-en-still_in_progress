@@ -1,4 +1,5 @@
 package main.java.com.InProgress.GUI;
+
 import main.java.com.InProgress.Model.*;
 import javax.swing.*;
 import java.awt.*;
