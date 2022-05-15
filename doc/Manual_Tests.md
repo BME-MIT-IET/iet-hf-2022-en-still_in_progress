@@ -2,19 +2,21 @@
 
 Main functionalit and so-called happy path of the game was tested manually with the following 10 test scenarios. All the tested have passed, but some bugs were found along the way.
 
-## Description
+## Tes cases:
 
-h1. Game start
+# Game start
 
-Objective: <initialize the game by setting up the field size and number of players>
+Objective: initialize the game by setting up the field size and number of players
 
-h2. Instructions
+## Instructions
+<table>
+<tr><th>Step No.</th><th>Step description</th><th>Expected result</th></tr>
+<tr><td>1.</td><td>run the project</td><td>game window pops up</td></tr>
+  <tr><td>1.</td><td>select 1 player</td><td></td></tr>
+  <tr><td>1.</td><td>leave the default field size and click ready to play</td><td>the main game window is opened, asteroid appeared, asteroid info present</td></tr>
+</table>
 
-|| Step No. || Step description || Expected result ||
-| 1. | <run the project> | <game window pops up> |
-| 2. | <select 1 player> | |
-| 2. | <leave the default field size and click ready to play> | <the main game window is opened, asteroid appeared, asteroid info present > |
-h2. Notes
+## Notes
 
 Setup:
 
@@ -24,223 +26,238 @@ Expected Result:
 
 - ![](./images/main.png)
 
-h2. Result
+## Result
 pass
 
-h1. Drill
+# Drill
 
-Objective: <check that the resource with mantel bigger than 0 is drillable >
+Objective: check that the resource with mantel bigger than 0 is drillable
 
-h2. Prerequisites
+## Prerequisites
 
 -Game start test
 
-h2. Instructions
+## Instructions
 
-|| Step No. || Step description || Expected result ||
-| 1. | <observe that the asteroid is not drilled through> | <there is nothing visible in the center of the asteroid> |
-| 2. | <press drill till the resource appears> | <resource is visible in the center of asteroid> |
-h2. Notes
+<table>
+<tr><th>Step No.</th><th>Step description</th><th>Expected result</th></tr>
+<tr><td>1.</td><td>observe that the asteroid is not drilled through</td><td>there is nothing visible in the center of the asteroid</td></tr>
+  <tr><td>1.</td><td>press drill till the resource appears</td><td>resource is visible in the center of asteroid</td></tr>
+</table>
+
+## Notes
 
 Expected Result:
 
 - ![](./images/drill.png)
 
-h2. Result
+## Result
 pass
 
-h1. Mine
+# Mine
 
-Objective: <check that the drilled through asteroid is minable >
+Objective: check that the drilled through asteroid is minable 
 
-h2. Prerequisites
+## Prerequisites
 
 -Game start test
+
 -Drill test
 
-h2. Instructions
+## Instructions
+<table>
+<tr><th>Step No.</th><th>Step description</th><th>Expected result</th></tr>
+<tr><td>1.</td><td>observe resource is visible</td><td>there is something in the middle of the asteroid</td></tr>
+  <tr><td>1.</td><td>press mine button</td><td>resource is added to the resource list in the bottom right corner, hollow parameter is set to true and mined message pops up</td></tr>
+</table>
 
-|| Step No. || Step description || Expected result ||
-| 1. | <observe resource is visible> | <there is something in the middle of the asteroid> |
-| 2. | <press mine button> | <resource is added to the resource list in the bottom right corner, hollow parameter is set to true and mined message pops up> |
-h2. Notes
+## Notes
 
 Expected Result:
 
 - ![](./images/mine.png)
 
-h2. Result
+## Result
 pass, but mined window pops up behind the main game window
 
-h1. Travel fail
+# Travel fail
 
 Objective: <check that player cannot travel to the asteroid not in the neighborhood>
 
-h2. Prerequisites
+## Prerequisites
 
 -Game start test
 
-h2. Instructions
+## Instructions
+<table>
+<tr><th>Step No.</th><th>Step description</th><th>Expected result</th></tr>
+<tr><td>1.</td><td>press travel button</td><td>destination selection window pops up</td></tr>
+  <tr><td>1.</td><td>enter coordinates where xyz coordinates differs with the current coordinate at least by 3</td><td>asteroid is not in the neighbourhood error pops up</td></tr>
+</table>
 
-|| Step No. || Step description || Expected result ||
-| 1. | <press travel button> | <destination selection window pops up> |
-| 2. | <enter coordinates where xyz coordinates differs with the current coordinate at least by 3> | <asteroid is not in the neighbourhood error pops up> |
-h2. Notes
+## Notes
 
 Expected Result:
 
 - ![](./images/travelFail.png)
 
-h2. Result
+## Result
 pass
 
-h1. Travel success
+# Travel success
 
 Objective: <check that player can travel to the asteroid in the neighborhood >
 
-h2. Prerequisites
+## Prerequisites
 
 -Game start test
 
-h2. Instructions
+## Instructions
+<table>
+<tr><th>Step No.</th><th>Step description</th><th>Expected result</th></tr>
+<tr><td>1.</td><td>press travel button</td><td>destination selection window pops up</td></tr>
+  <tr><td>1.</td><td>enter coordinates where xyz coordinates differs with the current coordinate at least by 1</td><td>asteroid changes, asteroid coordinates in the top right corner match the entered ones</td></tr>
+</table>
 
-|| Step No. || Step description || Expected result ||
-| 1. | <press travel button> | <destination selection window pops up> |
-| 2. | <enter coordinates where xyz coordinates differs with the current coordinate at least by 1> | <asteroid changes, asteroid coordinates in the top right corner match the entered ones> |
-
-h2. Result
+## Result
 pass
 
-h1. Change settler
+# Change settler
 
 Objective: <check that player can switch between settlers>
 
-h2. Prerequisites
+## Prerequisites
 
 -Game start test
 
-h2. Instructions
+## Instructions
 
-|| Step No. || Step description || Expected result ||
-| 1. | <choose another settler in drop-down menu> | <settler badge and resource list updates accordingly> |
-the entered ones> |
+  <table>
+<tr><th>Step No.</th><th>Step description</th><th>Expected result</th></tr>
+<tr><td>1.</td><td>choose another settler in drop-down menu</td><td>settler badge and resource list updates accordingly</td></tr>
+</table>
 
-h2. Result
+
+## Result
 pass, but drop-down list selected value is not updated
 
-h1. Leave resource fail
+# Leave resource fail
 
 Objective: <check that the player cannot leave resource on the asteroid if they do not have it >
 
-h2. Prerequisites
+## Prerequisites
 
 -Game start test
 -Drill test
 -Mine test
 
-h2. Instructions
-
-|| Step No. || Step description || Expected result ||
-| 1. | <press leave> | <recource choice window pops up> |
-| 1. | <choose resource that you dont have, press ok> | <you dont have resource window pops up> |
-the entered ones> |
-h2. Notes
+## Instructions
+<table>
+<tr><th>Step No.</th><th>Step description</th><th>Expected result</th></tr>
+<tr><td>1.</td><td>press leave</td><td>recource choice window pops up</td></tr>
+  <tr><td>1.</td><td>choose resource that you dont have, press ok</td><td>you dont have resource window pops up</td></tr>
+</table>
+  
+## Notes
 
 Expected Result:
 
 - ![](./images/leaveFail.png)
 
-h2. Result
+## Result
 pass
 
-h1. Leave resource success
+# Leave resource success
 
 Objective: <check that the player can leave resource on the asteroid if they have it >
 
-h2. Prerequisites
+## Prerequisites
 
 -Game start test
 -Drill test
 -Mine test
 
-h2. Instructions
+## Instructions
+<table>
+<tr><th>Step No.</th><th>Step description</th><th>Expected result</th></tr>
+<tr><td>1.</td><td>press leave</td><td>recource choice window pops up</td></tr>
+  <tr><td>1.</td><td>choose resource that you have, press ok</td><td>observe resource placed on the asteroid</td></tr>
+</table>
 
-|| Step No. || Step description || Expected result ||
-| 1. | <press leave> | <recource choice window pops up> |
-| 1. | <choose resource that you have, press ok> | <observe resource placed on the asteroid> |
-
-h2. Notes
+## Notes
 
 Expected Result:
 
 - ![](./images/leaveSuccess.png)
 
-h2. Result
+## Result
 pass
 
-h1. Pick up
+# Pick up
 
 Objective: <check that the resource with mantel bigger than 0 is drillable >
-
-h2. Prerequisites
+## Prerequisites
 
 -Game start test
 -Drill test
 -Mine test
 -Leave resource success test
 
-h2. Instructions
+## Instructions
+<table>
+<tr><th>Step No.</th><th>Step description</th><th>Expected result</th></tr>
+<tr><td>1.</td><td>press pick up</td><td>pick up message pops up and resource is added to resource list</td></tr>
+</table>
 
-|| Step No. || Step description || Expected result ||
-| 1. | <press pick up> | <pick up message pops up and resource is added to resource list> |
-
-h2. Notes
+## Notes
 
 Expected Result:
 
 - ![](./images/pick.png)
 
-h2. Result
+## Result
 pass
 
-h1. Help
+# Help
 
 Objective: <check that help menu works>
 
-h2. Instructions
+## Instructions
+<table>
+<tr><th>Step No.</th><th>Step description</th><th>Expected result</th></tr>
+<tr><td>1.</td><td>press help on the top bar</td><td>you're alone in space message pops up</td></tr>
+</table>
 
-|| Step No. || Step description || Expected result ||
-| 1. | <press help on the top bar> | <you're alone in space message pops up> |
-
-h2. Notes
+## Notes
 
 Expected Result:
 
 - ![](./images/help.png)
 
-h2. Result
+## Result
 pass
 
-h1. New game
+# New game
 
 Objective: <check that the player can start a new game >
 
-h2. Prerequisites
+## Prerequisites
 
 -Game start test
 
-h2. Instructions
+## Instructions
+<table>
+<tr><th>Step No.</th><th>Step description</th><th>Expected result</th></tr>
+<tr><td>1.</td><td>press menu - start new game</td><td>initialize game dialog pops up</td></tr>
+</table>
 
-|| Step No. || Step description || Expected result ||
-| 1. | <press menu - start new game > | <initialize game dialog pops up> |
-
-h2. Notes
+## Notes
 
 Setup:
 
 - ![](./images/new.png)
 
-h2. Result
+## Result
 pass
 
 ## Lessons learnt
