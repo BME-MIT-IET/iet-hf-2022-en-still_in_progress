@@ -9,11 +9,11 @@ Static analysis allows to automatically analyze the program without actually run
 After adding SonarLint to the project, 188 problems were found. Most of them, concerning the coding style (e.g. naming conventions, variables field hiding):
 For some of the problems, issues were created and the problems were eliminated:
 
-\*commented out dead codes removed:
+- commented out dead codes removed:
 
 - ![](./images/sonar.png)
 
-\*isEmpty() function used instead of comparision operator:
+- isEmpty() function used instead of comparision operator:
 
 - ![](./images/comparator.png)
 
@@ -23,15 +23,15 @@ After adding FindBugs to the project, 737 problems were found. Most of them rega
 
 For some of the problems, github issues were created and the problems were eliminated:
 
-\*variables and functions names were changed according to naming conventions:
+- variables and functions names were changed according to naming conventions:
 
 - ![](./images/name.png)
 
-\*fields were set to private and setters/getters added for access:
+ fields were set to private and setters/getters added for access:
 
 - ![](./images/private.png)
 
-\*magic numbers removed and variables added instead:
+- magic numbers removed and variables added instead:
 
 - ![](./images/magic.png)
 
