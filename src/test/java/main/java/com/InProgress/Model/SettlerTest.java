@@ -4,6 +4,9 @@ package main.java.com.InProgress.Model;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 class SettlerTest {
     int ROCK_COVER = 3;
@@ -87,6 +90,19 @@ class SettlerTest {
         String nameOfResource = this.testSettler.getItsInventory().getStoredResources().get(0).getResourceType();
 
         assertEquals(nameOfResource,"Carbon");
+    }
+    @Test
+    void Mine_Settler_Failure()
+    {
+        this.sourceAsteroid.setResourceOfAsteroid(new Carbon("Carbon"));
+        this.sourceAsteroid.setRockCover(1);
+
+        this.testSettler.mine(this.sourceAsteroid);
+
+        List<ResourceBase> emptyList = new ArrayList<ResourceBase>();
+
+        assertEquals(this.testSettler.getItsInventory().getStoredResources(),emptyList);
+
     }
 
 }
